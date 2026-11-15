@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Ezekiel Johnson Tunde</title>
+    <meta
+      name="description"
+      content="Contact details and message form for Ezekiel Johnson Tunde."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand-mark">ezekiel.</a>
+
+        <nav aria-label="Primary Navigation" class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="planner.html" class="nav-link">Planner</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="contact.html" class="btn-primary header-cta-desktop" aria-current="page">
+            Get In Touch
+          </a>
+          <button
+            id="mobile-menu-toggle"
+            type="button"
+            class="mobile-toggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu-drawer"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu-drawer" class="mobile-drawer">
+        <nav aria-label="Mobile Navigation" class="mobile-nav-list">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="about.html" class="mobile-nav-link">About</a>
+          <a href="projects.html" class="mobile-nav-link">Projects</a>
+          <a href="planner.html" class="mobile-nav-link">Planner</a>
+          <a href="contact.html" class="btn-primary mobile-nav-cta" aria-current="page">
+            Get In Touch
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero architectural-grid">
+        <div class="container">
+          <h1>Get In Touch</h1>
+          <p>
+            Reach out for conversations around Computer Science, student collaboration, or
+            general inquiries.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--muted">
+        <div class="container">
+          <div class="contact-grid">
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <article class="card">
+                <div>
+                  <h2 class="card-title">Contact Information</h2>
+                  <div class="contact-detail-list">
+                    <div class="contact-detail-item">
+                      <div class="contact-detail-label">Email</div>
+                      <div class="contact-detail-value">[Your email address]</div>
+                    </div>
+                    <div class="contact-detail-item">
+                      <div class="contact-detail-label">Phone</div>
+                      <div class="contact-detail-value">[Your preferred contact number]</div>
+                    </div>
+                    <div class="contact-detail-item">
+                      <div class="contact-detail-label">Current Location</div>
+                      <div class="contact-detail-value">[Your current location]</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="card">
+                <div>
+                  <h2 class="card-title">Social Links</h2>
+                  <div class="contact-detail-list">
+                    <div class="contact-detail-item">
+                      <div class="contact-detail-label">Social Media</div>
+                      <div class="contact-detail-value">[Add social media links]</div>
+                    </div>
+                    <div class="contact-detail-item">
+                      <div class="contact-detail-label">GitHub</div>
+                      <div class="contact-detail-value">[Add GitHub link]</div>
+                    </div>
+                    <div class="contact-detail-item">
+                      <div class="contact-detail-label">LinkedIn</div>
+                      <div class="contact-detail-value">[Add LinkedIn link]</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <article class="card">
+              <div>
+                <h2 class="card-title">Send a Message</h2>
+                <p class="card-body">
+                  Fill in the fields below to validate and prepare your message.
+                </p>
+
+                <form id="contact-form" class="form-stack" style="margin-top: 1.5rem;" novalidate>
+                  <div class="form-row-2">
+                    <div>
+                      <label for="contact-name" class="field-label">Your Name</label>
+                      <input
+                        id="contact-name"
+                        type="text"
+                        class="field-input"
+                        placeholder="Enter your name"
+                        required
+                      />
+                      <p id="error-name" class="field-error" aria-live="polite"></p>
+                    </div>
+
+                    <div>
+                      <label for="contact-email" class="field-label">Your Email</label>
+                      <input
+                        id="contact-email"
+                        type="email"
+                        class="field-input"
+                        placeholder="name@example.com"
+                        required
+                      />
+                      <p id="error-email" class="field-error" aria-live="polite"></p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="contact-subject" class="field-label">Subject</label>
+                    <input
+                      id="contact-subject"
+                      type="text"
+                      class="field-input"
+                      placeholder="Topic or inquiry"
+                      required
+                    />
+                    <p id="error-subject" class="field-error" aria-live="polite"></p>
+                  </div>
+
+                  <div>
+                    <label for="contact-message" class="field-label">Message</label>
+                    <textarea
+                      id="contact-message"
+                      rows="5"
+                      class="field-textarea"
+                      placeholder="Write your message here..."
+                      required
+                    ></textarea>
+                    <p id="error-message" class="field-error" aria-live="polite"></p>
+                  </div>
+
+                  <div>
+                    <button type="submit" class="btn-primary">Prepare Message</button>
+                  </div>
+                </form>
+
+                <div id="contact-feedback" class="form-feedback" hidden>
+                  <h3 class="card-title">Message formatted for sending</h3>
+                  <p class="card-body">
+                    No mail server is attached yet because the recipient email is currently a
+                    placeholder. You can copy the formatted message below.
+                  </p>
+                  <div id="contact-preview" class="form-preview-box"></div>
+                  <div class="hero-actions" style="margin-top: 1rem;">
+                    <button id="copy-message-btn" type="button" class="btn-primary">
+                      Copy Message
+                    </button>
+                    <button id="reset-contact-btn" type="button" class="btn-secondary">
+                      Write Another Message
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a href="index.html" class="brand-mark">ezekiel.</a>
+            <p class="card-body">
+              Ezekiel Johnson Tunde — Computer Science student at Miva Open University (Expected
+              <span class="tabular-nums">2029</span>).
+            </p>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Pages</h3>
+            <ul class="footer-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="planner.html">Planner</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Contact</h3>
+            <ul class="footer-list">
+              <li>[Your email address]</li>
+              <li>[Your preferred contact number]</li>
+              <li>[Your current location]</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© <span id="current-year">2026</span> Ezekiel Johnson Tunde.</p>
+          <p>Kaduna, Nigeria · Iwo, Osun State</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

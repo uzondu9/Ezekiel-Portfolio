@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planner — Ezekiel Johnson Tunde</title>
+    <meta
+      name="description"
+      content="Task planner for organizing coursework, deadlines, and personal study tasks."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand-mark">ezekiel.</a>
+
+        <nav aria-label="Primary Navigation" class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="planner.html" class="nav-link is-active" aria-current="page">Planner</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="contact.html" class="btn-primary header-cta-desktop">Get In Touch</a>
+          <button
+            id="mobile-menu-toggle"
+            type="button"
+            class="mobile-toggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu-drawer"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu-drawer" class="mobile-drawer">
+        <nav aria-label="Mobile Navigation" class="mobile-nav-list">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="about.html" class="mobile-nav-link">About</a>
+          <a href="projects.html" class="mobile-nav-link">Projects</a>
+          <a href="planner.html" class="mobile-nav-link is-active" aria-current="page">Planner</a>
+          <a href="contact.html" class="btn-primary mobile-nav-cta">Get In Touch</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero architectural-grid">
+        <div class="container">
+          <h1>Task Planner</h1>
+          <p>
+            Add tasks, assign priority, and track completion in a clean workspace.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--muted">
+        <div class="container">
+          <div class="planner-layout">
+            <!-- Simplified Add Task Widget: Task Input, Priority, Add Task -->
+            <div class="card">
+              <div>
+                <h2 class="card-title">Add Task</h2>
+
+                <form id="planner-form" class="form-stack" style="margin-top: 1.25rem;" novalidate>
+                  <div>
+                    <label for="task-title" class="field-label">Task</label>
+                    <input
+                      id="task-title"
+                      type="text"
+                      class="field-input"
+                      placeholder="Enter a task"
+                      required
+                    />
+                    <p id="task-title-error" class="field-error" aria-live="polite"></p>
+                  </div>
+
+                  <div>
+                    <label for="task-priority" class="field-label">Priority</label>
+                    <select id="task-priority" class="field-select">
+                      <option value="Low">Low</option>
+                      <option value="Medium" selected>Medium</option>
+                      <option value="High">High</option>
+                    </select>
+                  </div>
+
+                  <div style="padding-top: 0.25rem;">
+                    <button type="submit" class="btn-primary">Add Task</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Simplified Task List Widget -->
+            <div class="card">
+              <div>
+                <div class="planner-header-bar">
+                  <h2 class="card-title">Tasks</h2>
+                </div>
+
+                <div id="task-list" class="task-list" aria-live="polite"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a href="index.html" class="brand-mark">ezekiel.</a>
+            <p class="card-body">
+              Ezekiel Johnson Tunde — Computer Science student at Miva Open University (Expected
+              <span class="tabular-nums">2029</span>).
+            </p>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Pages</h3>
+            <ul class="footer-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="planner.html">Planner</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer-heading">Contact</h3>
+            <ul class="footer-list">
+              <li>[Your email address]</li>
+              <li>[Your preferred contact number]</li>
+              <li>[Your current location]</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© <span id="current-year">2026</span> Ezekiel Johnson Tunde.</p>
+          <p>Kaduna, Nigeria · Iwo, Osun State</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
